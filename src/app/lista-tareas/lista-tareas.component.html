@@ -1,0 +1,14 @@
+<div class="listaTareas-container">
+    <h2>Lista de Tareas</h2>
+    <div>
+        <input [(ngModel)]="tarea" (keydown.enter)="anyadirTareas()" placeholder="Nueva tarea" />
+        <button class="agregar-boton" (click)="anyadirTareas()">Agregar tarea</button>
+    </div>
+
+    <ul>
+        <li *ngFor="let tarea of tareas; let i = index">
+            {{ tarea }}
+            <button class="eliminar-boton" (click)="eliminarTareas(i)">Eliminar</button>
+        </li>
+    </ul>
+</div>
